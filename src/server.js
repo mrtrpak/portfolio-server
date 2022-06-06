@@ -1,8 +1,8 @@
-const express = require("express");
+import express from "express";
 const App = express();
 const PORT =  3333;
 
-const { soccerKey } = require('../secret');
+import { soccerKey } from '../secret';
 console.log(soccerKey);
 
 App.get("/", (req, res) => {
