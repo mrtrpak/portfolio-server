@@ -5,8 +5,8 @@ const PORT =  3333;
 const { soccerKey } = require('../secret');
 console.log(soccerKey);
 
-App.get("/", () => {
-
+App.get("/", (req, res) => {
+  res.send(soccerKey);
 });
 
 App.listen(PORT, () => {
