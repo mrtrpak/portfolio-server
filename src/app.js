@@ -1,14 +1,14 @@
-import express from "express";
-import config from "./config/config.json" assert {type: "json"};
+const express = require('express');
+const config = require('./config/config.json');
 const App = express();
 
 const env = process.env.NODE_ENV;
 const configuration = config[env];
 
-import { soccerKey } from './secret.js';
-console.log(soccerKey);
+const { soccerApi } = require('./secret.js');
+console.log(soccerApi);
 
-App.get("/", (req, res) => {
+App.get("/soccer", (req, res) => {
   res.send("hello world");
 });
 

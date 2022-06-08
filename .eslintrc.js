@@ -7,13 +7,14 @@ module.exports = {
   },
   extends: ["eslint:recommended", "plugin:react/recommended"],
   parserOptions: {
+    "parser": "babel-eslint",
     "sourceType": "module",
     "allowImportExportEverywhere": true,
     ecmaFeatures: {
+      "experimentalObjectRestSpread": true,
       jsx: true,
     },
     ecmaVersion: "latest",
-    parser: "babel-eslint",
   },
   plugins: ["react"],
   rules: {},
